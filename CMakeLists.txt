@@ -7,21 +7,21 @@ if((CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR) AND (CMAKE_PROJECT_NAME 
 	set(LC_CONSOLE_UTILS_MAIN_PROJECT ON)
 endif()
 
-add_library(lc_console_utils)
+add_library(LC_console_utils)
 
-target_sources(lc_console_utils
+target_sources(LC_console_utils
 	PRIVATE
 		"lib/src/console.cpp"
 )
 
-target_include_directories(lc_console_utils
+target_include_directories(LC_console_utils
 	PUBLIC
 		"lib/include"
 )
 
 # c++20
 set_target_properties(
-	lc_console_utils
+	LC_console_utils
 	PROPERTIES
 		CXX_STANDARD 20
 		CXX_STANDARD_REQUIRED ON
