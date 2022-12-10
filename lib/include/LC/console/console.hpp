@@ -14,8 +14,8 @@ namespace lc
 		uint8_t g = 128;
 		uint8_t b = 128;
 
-		TerminalColor() = default;
-		TerminalColor(uint8_t r, uint8_t g, uint8_t b) : r(r), g(g), b(b) {}
+		constexpr TerminalColor() = default;
+		constexpr TerminalColor(uint8_t r, uint8_t g, uint8_t b) : r(r), g(g), b(b) {}
 
 		static TerminalColor BLACK;
 		static TerminalColor GRAY;
@@ -29,6 +29,17 @@ namespace lc
 
 	private:
 	};
+
+	namespace terminal_themes
+	{
+		namespace dark
+		{
+			// see https://github.com/OpenPhysicsNotes/openphysicsnotes-content/blob/main/css/code.css
+			static inline constexpr TerminalColor pvar   = TerminalColor(150, 150, 150);
+			static inline constexpr TerminalColor number = TerminalColor(181, 206, 168);
+			static inline constexpr TerminalColor string = TerminalColor(214, 157, 122);
+		}
+	}
 
 	std::string colorize(const std::string& str, const TerminalColor& color, bool enable = true);
 }
