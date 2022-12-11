@@ -38,6 +38,9 @@ namespace lc
 			static inline constexpr TerminalColor pvar   = TerminalColor(150, 150, 150);
 			static inline constexpr TerminalColor number = TerminalColor(181, 206, 168);
 			static inline constexpr TerminalColor string = TerminalColor(214, 157, 122);
+			static inline constexpr TerminalColor attribute = TerminalColor(156, 220, 254);
+			static inline constexpr TerminalColor keyword = TerminalColor(86, 156, 214);
+			static inline constexpr TerminalColor tag = TerminalColor(86, 156, 214);
 		}
 	}
 
